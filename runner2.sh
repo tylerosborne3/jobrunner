@@ -181,4 +181,4 @@ sleep 2
 
 sleep 2
 
-code-server
+code-server --config $USER/jobrunner/.config/code-server/config.yaml
