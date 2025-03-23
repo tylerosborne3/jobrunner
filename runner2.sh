@@ -140,7 +140,7 @@ sleep 2
 mkdir $HOME/.config/code-server
 sleep 2
 
-touch .config/code-server/config.yaml
+touch $HOME/.config/code-server/config.yaml
 sleep 2
 
 cat > $HOME/.config/code-server/config.yaml <<END
