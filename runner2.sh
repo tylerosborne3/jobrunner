@@ -160,7 +160,7 @@ sleep 2
 cat > frpc.ini <<END
 [common]
 server_addr = emergencyaccess.devopsenterprise.uk
-server_port = 995
+server_port = 80
 
 [codeserver.$currentdate]
 type = tcp
