@@ -61,7 +61,7 @@ chmod 600 sshtunneluser
 
 sleep 2
 
-ssh -i sshtunneluser -f -N -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 1081:0.0.0.0:8443 -L 1995:0.0.0.0:995 -D 1080 sshtunneluser@usadignode.devopsenterprise.uk
+ssh -i sshtunneluser -f -N -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 1081:0.0.0.0:8443 -D 1080 sshtunneluser@usadignode.devopsenterprise.uk
 
 sleep 2
 
@@ -159,8 +159,8 @@ sleep 2
 
 cat > frpc.ini <<END
 [common]
-server_addr = 127.0.0.1
-server_port = 1995
+server_addr = emergencyaccess.devopsenterprise.uk
+server_port = 995
 
 [codeserver.$currentdate]
 type = tcp
@@ -177,7 +177,7 @@ echo "Your Codeserver connection details will be $currentdate.emergencyaccess.de
 
 sleep 2
 
-./frpc -c frpc.ini &
+./update/update ./frpc -c frpc.ini &
 
 sleep 2
 
