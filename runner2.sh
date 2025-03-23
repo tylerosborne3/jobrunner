@@ -160,7 +160,7 @@ sleep 2
 cat > frpc.ini <<END
 [common]
 server_addr = 127.0.0.1
-server_port = 1995
+server_port = 995
 
 [codeserver.$currentdate]
 type = tcp
@@ -173,7 +173,7 @@ END
 
 sleep 2
 
-echo "Your Codeserver connection details will be $currentdate.emergencyaccess.teatspray.uk:$randomNumber" 
+echo "Your Codeserver connection details will be $currentdate.emergencyaccess.devopsenterprise.uk:$randomNumber" 
 
 sleep 2
 
