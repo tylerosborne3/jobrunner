@@ -173,7 +173,7 @@ END
 
 sleep 2
 
-echo "Your Codeserver connection details will be $currentdate.emergencyaccess.devopsenterprise.uk:$randomNumber" 
+echo "Your Codeserver connection details will be $currentdate.emergencyaccess.devopsenterprise.uk:$randomNumber"
 
 sleep 2
 
