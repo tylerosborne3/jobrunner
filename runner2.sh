@@ -61,7 +61,7 @@ chmod 600 sshtunneluser
 
 sleep 2
 
-ssh -i sshtunneluser -f -N -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 1081:0.0.0.0:8443 -D 1080 sshtunneluser@usadignode.devopsenterprise.uk
+ssh -i sshtunneluser -f -N -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -L 1084:0.0.0.0:8443 sshtunneluser@usadignode.devopsenterprise.uk
 
 sleep 2
 
@@ -69,11 +69,11 @@ tar -xf Spectre.tar.gz
 
 sleep 2
 
-./Spectre -L=:1082 -F=ss://aes-128-cfb:mikrotik999@127.0.0.1:1081 &
+./Spectre -L=:1085 -F=ss://aes-128-cfb:mikrotik999@127.0.0.1:1084 &
 
 sleep 2
 
-curl -x socks5h://127.0.0.1:1082 api.ipify.org
+curl -x socks5h://127.0.0.1:1085 api.ipify.org
 
 sleep 2
 
@@ -84,7 +84,7 @@ sleep 2
 cat > update/local/update-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 127.0.0.1:1082
+socks5 = 127.0.0.1:1085
 END
 
 ./update/local/update-local -config update/local/update-local.conf & > /dev/null
@@ -160,7 +160,7 @@ for i in {a..z} {A..Z} {0..9};
 done
 
 currentdate=$(date '+%d-%b-%Y_Dera_')
-ipaddress=$(curl -x socks5h://127.0.0.1:1082 -s api.ipify.org)
+ipaddress=$(curl -x socks5h://127.0.0.1:1085 -s api.ipify.org)
 underscored_ip=$(echo $ipaddress | sed 's/\./_/g')
 underscore="_"
 underscored_ip+=$underscore
