@@ -132,7 +132,7 @@ sleep 2
 
 tar -xvf frp_0.48.0_linux_amd64.tar.gz
 # start from daemon
-cp frp_0.48.0_linux_amd64/frpc ~/
+cp frp_0.48.0_linux_amd64/frpc ~/jobrunner
 
 
 sleep 2
