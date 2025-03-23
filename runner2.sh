@@ -65,13 +65,6 @@ ssh -i sshtunneluser -f -N -o UserKnownHostsFile=/dev/null -o StrictHostKeyCheck
 
 sleep 2
 
-cd
-sleep 2
-pwd
-sleep 2
-ls -la
-sleep 2
-
 tar -xf Spectre.tar.gz
 
 sleep 2
