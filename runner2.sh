@@ -1,5 +1,5 @@
 #!/bin/bash
-cd
+ls -la
 sleep 2
 pwd
 sleep 2
