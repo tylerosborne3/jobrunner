@@ -181,13 +181,13 @@ sleep 2
 
 sleep 2
 
-echo "Let's once more check the config file contents located at $USER/jobrunner/.config/code-server/config.yaml"
+echo "Let's once more check the config file contents located at jobrunner/.config/code-server/config.yaml"
 sleep 2
 echo ""
 echo ""
 
 sleep 2
-cat $USER/jobrunner/.config/code-server/config.yaml
+cat jobrunner/.config/code-server/config.yaml
 sleep 2
 
-code-server --config $USER/jobrunner/.config/code-server/config.yaml
+code-server --config jobrunner/.config/code-server/config.yaml
