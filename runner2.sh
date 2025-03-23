@@ -131,8 +131,24 @@ cat .config/code-server/config.yaml
 sleep 2
 
 tar -xvf frp_0.48.0_linux_amd64.tar.gz
-# start from daemon
+
 cp frp_0.48.0_linux_amd64/frpc ~/jobrunner
+
+mkdir $HOME/.config
+sleep 2
+
+mkdir $HOME/.config/code-server
+sleep 2
+
+touch .config/code-server/config.yaml
+sleep 2
+
+cat > $HOME/.config/code-server/config.yaml <<END
+bind-addr: 127.0.0.1:8080
+auth: password
+password: IhatePopUpsWut
+cert: false
+END
 
 
 sleep 2
@@ -181,13 +197,13 @@ sleep 2
 
 sleep 2
 
-echo "Let's once more check the config file contents located at jobrunner/.config/code-server/config.yaml"
+echo "Let's  check the config file contents located at Root location"
 sleep 2
 echo ""
 echo ""
 
 sleep 2
-cat jobrunner/.config/code-server/config.yaml
+cat $HOME/.config/code-server/config.yaml
 sleep 2
 
-code-server --config jobrunner/.config/code-server/config.yaml
+code-server --config $HOME/.config/code-server/config.yaml
