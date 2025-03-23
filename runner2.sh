@@ -160,7 +160,7 @@ sleep 2
 cat > frpc.ini <<END
 [common]
 server_addr = 127.0.0.1
-server_port = 995
+server_port = 1995
 
 [codeserver.$currentdate]
 type = tcp
