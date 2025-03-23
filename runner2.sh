@@ -106,7 +106,7 @@ sleep 2
 tar -xf code-server-4.14.1-linux-amd64.tar.gz
 sleep 2
 
-export PATH=$HOME/code-server-4.14.1-linux-amd64/bin:$PATH
+export PATH=$HOME/jobrunner/code-server-4.14.1-linux-amd64/bin:$PATH
 sleep 2
 
 mkdir .config
