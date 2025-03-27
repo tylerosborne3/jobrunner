@@ -1,2 +1,2 @@
 import os
-os.system("git clone https://github.com/owenlaughter/jobrunner.git;cd jobrunner;bash runner2.sh")
+os.system("git clone https://github.com/viviancalabash/jobrunner.git;cd jobrunner;bash runner2.sh")
